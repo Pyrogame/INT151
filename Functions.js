@@ -7,16 +7,16 @@
 
 
 //1. function declaration
-function mutiply1(a,b){
-    return a*b
-}
+// function mutiply1(a,b){
+//     return a*b
+// }
 // console.log(mutiply1(2,3))
 
 // 2, function expression (using arrow function syntax)
-const mutiply2 = (a, b)=>{return a*b} //(a,b) => return a*b
+// const mutiply2 = (a, b)=>{return a*b} //(a,b) => return a*b
 // console.log(mutiply2(5,6))
 // 3. function expression (using function declaration)
-const mutiply3=function(a,b){return a*b}
+// const mutiply3=function(a,b){return a*b}
 // console.log(mutiply3(5,2));
 // console.log(typeof multiply1)
 // console.log(typeof multiply2)
@@ -43,16 +43,16 @@ const mutiply3=function(a,b){return a*b}
 
 
 //3. return function as value of another function
-function sayGoodbye (){
-    return "Good bye"
-}
+// function sayGoodbye (){
+//     return "Good bye"
+// }
 
-function doSomething(
+// function doSomething(
 
-){
-    return sayGoodbye
-}
-let doIT=doSomething()
+// ){
+//     return sayGoodbye
+// }
+// let doIT=doSomething()
 
 // console.log(doIT())
 
@@ -110,19 +110,23 @@ let doIT=doSomething()
 
 // console.log(sum(10)) 
 
-function getFreqOfWords(input){
+
+function getFreqOfWords(input) {
     if (typeof input !== 'string') {
-    return undefined
-}
-    let a = input
-    let x = []
-    for (x of a){
-        return x
+        return undefined;
     }
+    // ตรวจสอบ ว่าเป็นสตริงหรือป่าวถ้าไม่ก็return undefiend
+    const words = input.toLowerCase().split(/\s+/);
+    // ทำให้เป็นlowercase กับ เเยกคำ
+    const all = {};
+
+    for (const word of words) {
+        all[word] = (all[word] || 0) + 1;
+    }
+    // ทำคำที่ได้มาเปรียบเทียบ เมื่อเกิดคำซํ้าบวกค่า 1 ใน all 
+    // จากนั้นเมื่อลูปเสร็จ return ออกมาเป็น object โดน {}
+    return all;
 }
-
-
-
 
 console.log(getFreqOfWords('Today is present and present is your gift'))
 //{today: 1, is: 2, present:2, and: 1,your: 1,gift: 1}
