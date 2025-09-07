@@ -1,0 +1,24 @@
+{
+  "name": "int151",
+  "version": "1.0.0",
+  "main": "arrays.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pyrogame/INT151.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pyrogame/INT151/issues"
+  },
+  "homepage": "https://github.com/Pyrogame/INT151#readme",
+  "description": "",
+  "devDependencies": {
+    "jest": "^30.1.3"
+  }
+}
